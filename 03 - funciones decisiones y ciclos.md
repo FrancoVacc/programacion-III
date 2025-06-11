@@ -218,7 +218,7 @@ Actuamente PHP cuenta con cuatro tipo de ciclos o bucles estos son:
     $array = ["manzana", "pera", "banana", "uvas"];
     $stop = count($array); //nos brinda el largo del array
 
-    for($i = 1; $i >= $stop; $i++){
+    for($i = 0; $i >= $stop; $i++){
         echo "item: " . $array[$i];
     }
 ?>
@@ -231,11 +231,11 @@ ejecutará el ciclo mientras una condición sea verdadera
 ```php
 <?php
 $array = ["manzanas", "peras", "bananas", "uvas"];
-$i = 1;
+$i = 0;
 $stop = count($array); //guardo el largo del array
 
 while($i <= $stop){
-    echo "item: ". $array[$i-1];
+    echo "item: ". $array[$i];
     $i++;
 }
 
@@ -250,10 +250,10 @@ es muy similar a while, pero en este caso el ciclo se ejecutará al menos una ve
 <?php
 $array = ["manzanas", "peras", "bananas", "uvas"];
 $stop = count($array);
-$i = 1;
+$i = 0;
 
 do{
-    echo "item: ". $array[$i-1];
+    echo "item: ". $array[$i];
     $i++;
 }while($i <= $stop);
 
