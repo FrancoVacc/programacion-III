@@ -15,8 +15,8 @@ Hay conceptos que debemos conocer para poder trabajar con este tipo de programac
 - **Objetos**: Son las entidades que tienen estados (los atributos) y que pueden realizar acciones con ellos (métodos). Un ejemplo podría ser un auto, cuyos atributos podrían ser el color, la patente, el modelo, el tipo de motor, etc. y los métodos podrían ser por ejemplo que pueda arrancar el motor, que pueda marchar, que frene, etc.
 - **Calses**: estos son como moldes para poder fabricar los objetos, sin las clases no tendríamos objetos. Las clases son una plantilla, es decir definimos en ellas aspectos generales del objeto que vamos a crear luego. dentro de la clase tendremos los atributos del objeto y sus métodos. una clase podría ser por ejemplo la clase auto (en general). Sabemos que todos los autos tienen un color, una patente, un motor, etc y que a su vez tienen los métodos.
 - **Atributos**: Son las variables que almacenan información dentro de los objetos.
-- **Métodos**: Son las funciones que determinan el comportamiento del objeto. Literalmente son funciones que estarán detntro del objeto.
-- **Herencia**: muchas veces no es necesario contruir una clase de cero, sino que lo más común es construír una clase a partir de una clase ya existente y que esta herede los razgos de la clase superior. Explicado mejor, imaginemos que tenemos una clase Animal, con sus atributos y métodos. Si nos ponemos a pensar, un perro es un animal por lo tanto muchos de los atributos y los métodos de los perros pueden ser repetidos dentro de la clase Perro. Para aprovechar esto podemos hacer que la clase Perro se extienda de la clase animal y que herede todos los atributos y todos los métodos.
+- **Métodos**: Son las funciones que determinan el comportamiento del objeto. Literalmente son funciones que estarán dentro del objeto.
+- **Herencia**: muchas veces no es necesario construír una clase de cero, sino que lo más común es construír una clase a partir de una clase ya existente y que esta herede los razgos de la clase superior. Explicado mejor, imaginemos que tenemos una clase Animal, con sus atributos y métodos. Si nos ponemos a pensar, un perro es un animal por lo tanto muchos de los atributos y los métodos de los perros pueden ser repetidos dentro de la clase Perro. Para aprovechar esto podemos hacer que la clase Perro se extienda de la clase animal y que herede todos los atributos y todos los métodos.
 - **Encapsulamiento**: al trabajar con POO, podremos proteger algunos atributos o métodos de las clases, de esta menera podremos restringir el acceso desde fuera.
 - **Plimorfismo**: Permite que un objeto pueda tener diferentes comportamientos dependiendo del contexto, lo que facilita la reutilización del código.
 - **Abstracción**: Esta facultad oculta todo el funcionamiento interno del objeto y nosotros solo podremos interactuar con el a través de sus atributos y métodos, sin conocer como estos funcionan. Muchos lenguajes de programación funcionan así, por ejemplo en el lenguaje JavaScript todo es un objeto y estos objetos tienen métodos. ejemplo si creamos un arreglo, para obtener el largo debemos llamar al metodo length, el cual nos devuelve el largo del arreglo. Al llamar al método, nosotros no conocemos como este opera, ni que hace sino que solo conocemos el resultado de su proceso.
@@ -161,7 +161,7 @@ $miPerro->hacerSonido(); //sonido genérico
 
 > si nos fijamos, no es necesario declarar el atributo nombre en la clase perro ya que este lo hereda de la clase animal, lo mismo con el método hacerSonido()
 
-Herencia de constructor, para que una clase herede el contructor de la clase padre, debemos declararlo para ello hacemos lo siguiente
+Herencia de constructor, para que una clase herede el constructor de la clase padre, debemos declararlo para ello hacemos lo siguiente
 
 ```php
 <?php
