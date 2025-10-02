@@ -67,3 +67,33 @@ En este caso, si da false, se envia a una vista exclusiva que maneja el error. E
 ### Cómo crear una expresión regular
 
 Para crear una expresión regular debemos tener en cuenta la estructura que ésta tiene, antes era muy común que el mismo programador arme la expresión regular a mano, hoy en día es una tarea para la IA.
+
+### Manejo de Contraseñas
+
+Para manejar las contraseñas de los usuarios, debemos realizar dos acciones fundamentales.
+
+A la hora de registrar un usuario nuevo debemos guardar la contraseña de forma encriptada para que nadie, por más que tenga accesso a la base de datos pueda conocerla. Para ello es necesario que utilicemos una función de php llamada _password_hash()_
+
+```php
+$password = 'micontraseña123';
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+// luego guardaremos la password hasheada en la db.
+```
+
+de esa manera la password se verá encriptada.
+
+Cuando verifiquemos la contraseña debemos recojer la contraseña del usuario y utilizar la función _password_verify()_
+
+```php
+//la password es la que viene del usuario
+//la passwordDB es la que viene de la base de datos, esta está hasheada
+
+if (password_verify($password, $passwordDB)) {
+    echo "es correcta";
+} else {
+    echo "es incorrecta";
+}
+```
+
+> en el caso de que las contraseñas sean iguales, va a ir por true y si no por false
